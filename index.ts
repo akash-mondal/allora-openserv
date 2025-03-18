@@ -106,7 +106,7 @@ async function main() {
     console.log("Initializing agent...");
     
     const dummyWalletClient = createWalletClient({
-        chain: mainnet,
+        chain: mainnet as any,
         transport: http(process.env.RPC_PROVIDER_URL),
     });
 
