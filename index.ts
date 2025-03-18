@@ -164,20 +164,6 @@ async function main() {
         return;
     }
     
-    try {
-        console.log("Processing user query...");
-        const response = await goatAgent.process({
-            messages: [
-                {
-                    role: 'user',
-                    content: "What's the price prediction for btc in the next 8 hours vs next 5mins?",
-                },
-            ],
-        });
-        console.log("Agent Response:", response.choices[0].message.content);
-    } catch (error) {
-        console.error("Error processing query:", error);
-    }
 }
 main().catch(error => {
     console.error("Unhandled error in main function:", error);
