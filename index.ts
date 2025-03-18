@@ -106,9 +106,9 @@ async function main() {
     console.log("Initializing agent...");
     
     const dummyWalletClient = createWalletClient({
-        chain: mainnet as any,
+        chain: mainnet,
         transport: http(process.env.RPC_PROVIDER_URL),
-    });
+    }) as any;
 
     const wallet = viem(dummyWalletClient);
     console.log("Wallet client initialized");
